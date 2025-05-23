@@ -1,38 +1,87 @@
 .header {
   background-color: hsl(0, 100%, 75%);
   display: flex;
-  align-items: center;
+  width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
   position: relative;
   z-index: 9999;
+  justify-content: space-between;
+  align-items: center;
+  height: 170px;
 }
 
 .header__menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  gap: 2em;
-  border: 1px solid blue;
-}
-
-.header__link {
-  font-size: var(--size-xs);
-  text-decoration: none;
-  font-weight: 600;
-  color: var (--clr-slate600);
-  letter-spacing: -0.005em;
+  display: none;
 }
 
 img {
   height: 45px;
   width: auto;
-  fill: currentColor;
+  fill: currentColor ;
   display: block;
 }
 
+/* Hamburger Menu Button */
+.header__bars {
+  display: block; /* Visible on mobile */
+  background: none;
+  border: none;
+  color: var(--clr-slate600); /* Give it a color */
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem; /* Space it from the menu if they were ever side-by-side */
+}
+
+.header__bars svg {
+  width: 24px; /* Explicit size for SVG */
+  height: 24px;
+  display: block;
+}
+
+/*
+@media (min-width: 475px) {
+
+}
+*/
+
+/*
+@media (min-width: 640px) {
+
+}
+*/
+
 @media (min-width: 768px) {
   .header__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 2em;
+    border: 1px solid blue;
   }
+
+  .header__link {
+    font-size: var(--size-xs);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--clr-slate600);
+    letter-spacing: -0.005em;
+  }
+
+  img {
+    height: 45px;
+    width: auto;
+    fill: currentColor;
+    display: block;
+  }
+  .header__bars {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1280px) {
+}
+@media (min-width: 1536px) {
 }
